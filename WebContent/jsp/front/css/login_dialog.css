@@ -1,0 +1,90 @@
+/*错误提示框*/
+.waring_dialog{
+	border-radius: 0px;
+	outline: none;
+	border: 1px solid #FFCCCC;
+	height: 2.3em;
+	line-height: 2.3em;
+	vertical-align: middle;
+	padding: 0 0.7em;
+	background-color: #FFCCCC;
+}
+
+/*错误提示框按钮*/
+.waring_dialog button{
+	margin-right: 1em;
+	height: 2em;
+	vertical-align: middle;
+	outline: none;
+}
+.waring_dialog button span{
+	font-size: 1.2em;
+}
+
+/*错误提示框输入框*/
+.form-group input{
+	border-radius: 0px;
+	border-width: 1px;
+}
+
+/*错误提示框输入框边款样式*/
+.border_danger{
+	border-color: #FF9999;
+}
+.border_success{
+	border-color: #66CC66;
+}
+
+/*动画时间*/
+.animation_time{
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;  /* Firefox 4 */
+	-webkit-transition: all 0.5s;   /* Safari 和 Chrome */
+	-o-transition: all .5s;    /* Opera */
+}
+
+/*登录对话框*/
+#login_modal .modal-content{
+	border-radius: 7px;
+	max-width: 500px;
+	background-image: url(../img/bg5.png);
+	background-repeat: repeat;
+	background-position: center;
+}
+#login_modal .modal-header{
+	font-size: 1.2em;
+}
+
+/*对话框头部button*/
+#login_modal .modal-header button{
+}
+#login_modal .modal-header button span{
+	font-size: 1.7em;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;  /* Firefox 4 */
+	-webkit-transition: all 0.5s;   /* Safari 和 Chrome */
+	-o-transition: all .5s;    /* Opera */
+}
+
+/*对话框底部button*/
+#login_modal .modal-footer button{
+	font-size: 0.9em;
+	display: inline-block;
+	width: calc( 50% - 5px );
+	background-image: url(../img/bg1.jpg);
+	background-repeat: repeat;
+	background-position: center;
+}
+#login_modal .modal-footer button:hover{
+	background-image: url(../img/bg3.png);
+	background-repeat: repeat;
+}
+#login_modal .modal-footer button:first{
+	float: left;
+}
+#login_modal .modal-footer button:last{
+	float: right;
+}
+.login_font_big{
+	font-size: 0.9em;
+}

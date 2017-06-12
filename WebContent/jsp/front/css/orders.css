@@ -1,0 +1,418 @@
+/*=================静态可重用设置==================*/
+
+      /*-----------动画过度时长class类------------*/
+      /*用于加载动态改变，时间0.5s**/
+      .actions1{
+         transition: all 0.5s;
+          -moz-transition: all 0.5s;  /* Firefox 4 */
+          -webkit-transition: all 0.5s;   /* Safari 和 Chrome */
+         -o-transition: all .5s;    /* Opera */
+      }
+      /*用于加载动态改变，时间0.2s**/
+      .actions2{
+         transition: all 0.2s;
+          -moz-transition: all 0.2s;  /* Firefox 4 */
+          -webkit-transition: all 0.2s;   /* Safari 和 Chrome */
+         -o-transition: all .2s;    /* Opera */
+      }
+      /*-------------------结束-------------------*/
+
+      /*-------------背景图片class类--------------*/
+.bg1{
+	background-image: url(../image/bg/bg1.jpg) !important;
+	background-repeat: repeat;
+}
+.bg2{
+	background-image: url(../image/bg/bg2.jpg) !important;
+	background-repeat: repeat;
+}
+.bg3{
+	background-image: url(../image/bg/bg3.png) !important;
+	background-repeat: repeat;
+}
+.bg4{
+	background-image: url(../image/bg/bg4.jpg) !important;
+	background-repeat: repeat;
+}
+.bg5{
+	background-image: url(../image/bg/bg5.png) !important;
+	background-repeat: repeat;
+}
+      /*-------------------结束-------------------*/
+
+      /*=======================结束=======================*/
+
+
+
+      /*====================导航栏设置====================*/
+
+      /*------------导航栏样式初始化--------------*/
+.top_navbar{
+	text-align: center !important;
+	box-shadow: 0 7px 5px #666666;
+}
+.top_navbar *{
+	color: #fff !important;
+	font-size: 1em !important;
+	font-weight: normal !important;
+	vertical-align: middle !important;
+}
+      /*-------------------结束-------------------*/
+
+      /*-------------导航栏导航项设置-------------*/
+
+.navbar_menu_item{
+	color: #000 !important;
+	width: 150px !important;
+}
+.navbar_menu_item:hover{
+	width: 170px !important;
+}
+.navbar_menu_item a:hover{
+	background-image: url(../image/bg/bg3.png) !important;
+	background-repeat: repeat;
+}
+      /*-------------------结束-------------------*/
+
+      /*---------------账户菜单设置---------------*/
+.account_button{
+	border-radius: 0 !important;
+	width: 150px !important;
+}
+/*-------------------结束-------------------*/
+
+      /*=======================结束=======================*/
+
+      /*====================主容器设置====================*/
+
+      /*---------------主容器初始化---------------*/
+
+      #mainer{
+      	margin:100px 0  50px !important;
+      	font-size: 0.8em !important;
+      }
+
+      /*-------------------结束-------------------*/
+
+      /*------------表单容器table设置-------------*/
+.order_show{
+	margin: 0 auto;
+}
+.order_show th{
+	padding: 0;
+	margin: 0;
+}
+.order_show tr{
+	padding: 0;
+	margin: 0;
+}
+.order_show button{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+/*-------------------结束-------------------*/
+
+/*----------批量操作容器table设置-----------*/
+/*批量操作栏*/
+.order_show_check_all{
+	padding:10px 21px !important;
+	vertical-align: middle !important;
+	line-height: 24px !important;
+	height:24px !important;
+	border: 0 !important;
+	margin: 0 !important;
+	font-size: 1em;
+}
+.order_show_check_all_left{
+	width: 500px !important;
+
+	display: inline-block !important;
+	line-height: 24px !important;
+	height:24px !important;
+	vertical-align: middle !important;
+}
+#batch_confirm{
+	margin-left: 20px;
+}
+.order_show_check_all_right{
+	width: 458px !important;
+	text-align: right !important;
+
+	display: inline-block !important;
+	line-height: 24px !important;
+	height:24px !important;
+	vertical-align: middle !important;
+	float: right;
+}
+/*End-批量操作栏*/
+.list_img{
+	width: 90px;
+	height: 90px;
+}
+.list_item_table{
+	border-top:5px solid #ccc !important;
+	margin: 8px 0 !important;
+	background-position: center !important;
+          box-shadow: 7px 7px 3px #CCCCCC;
+          min-width: 1260px;
+}
+.list_item_table:hover{
+	border-color: #fcb053 !important;
+}
+
+.list_item_table tr td{
+	border:1px solid #CCCCCC;
+	padding: 15px 20px;
+	text-align: center;
+}
+.list_item_table_heander td{
+	text-align: center !important;
+	font-size: 1em !important;
+}	
+#checkall{
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+.list_item_table_item_menu{
+
+}
+.list_item_table_item_menu div{
+	display: inline-block;
+}
+.list_item_table_item_menu_div1{
+	float: left;
+}
+.list_item_table_item_menu_div2 div{
+	margin: 0 40px;
+}
+.list_item_table_item_menu_div3{
+	float: right;
+}
+.table_show_control_button{
+	color: #999;
+}
+.list_item_table:hover .table_show_control_button{
+	color: #FF9900;
+}
+.table_show_control_button:hover{
+	color: #FF3333;
+}
+
+/*隐藏table收起时展示的菜单项*/
+.list_item_table_item_menu .list_item_table_list_div{
+		display: none;
+		margin: 0 40px;
+}
+
+.list_item_table_item_menu_div2 .order_pay_button{
+	/*display: none;*/
+}
+.list_item_table_tr_for_actions .display_none{
+	display: none;
+}
+.list_item_table_tr_for_actions .remove_display_none{
+	display: inline-block;
+}
+.list_item_table_heander_menu .display_none{
+	display: none;
+}
+.list_item_table_heander_menu .remove_display_none{
+	display: inline-block;
+}
+/*-------------------结束-------------------*/
+
+/*--------批量操作容器table子内容设置-------*/
+/*商品单元格*/
+.product_item_show{
+	text-align: left !important;
+}
+.product_item_show .list_item_table_list_div{
+	min-width: 270px;
+}
+.product_item_show_text{
+	display: inline-block;
+}
+.product_item_show_text span{
+	font-size: 1.1em;
+}
+.product_item_show_div{
+	font-size: 1em !important;
+}
+.product_item_show_left{
+	display: inline;
+	width: 116px;
+	float: left;
+	margin-right: 10px;
+}
+.product_item_show_right{
+	text-align: left !important;
+	width: 183px;
+	display: inline;
+	float: left;
+}
+.failure_warning{
+	font-size: 1.5em;
+	margin-right: 0.1em;
+	color: #ff5656 !important;
+}
+/*End-商品单元格*/
+
+/*价格单元格*/
+.product_item_price{
+	font-size: 1.2em;
+}
+.product_item_price .list_item_table_list_div{
+	min-width: 50px;
+}
+/*End-价格单元格*/
+
+/*数量单元格*/
+.product_item_quantity{
+	font-size: 1.2em;
+}
+.product_item_quantity .list_item_table_list_div{
+	min-width: 50px;
+}
+/*End-数量单元格*/
+
+/*实付款单元格*/
+.product_total_price{
+	font-size: 1.2em;
+}
+.product_total_price .list_item_table_list_div{
+	min-width: 80px;
+}
+/*End-实付款单元格*/
+
+/*收货地址单元格*/
+.product_shipping_address{
+}
+.product_shipping_address .list_item_table_list_div{
+	min-width: 300px;
+}
+.address_input{
+	width: 100%;
+	min-height: 150px;
+	margin: 0 !important;
+	display: block;
+	outline:none !important;
+}
+.select_input{
+	/*border:0 !important;*/
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	outline:none !important;
+	display: block;
+}
+.address_change_button_sure{
+	display: block;
+	width: 100%;
+	border-top-right-radius: 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-right-radius: 7px !important;
+	border-bottom-left-radius: 7px !important;
+	outline:none !important;
+}
+/*End-收货地址单元格*/
+
+/*订单状态单元格*/
+.product_order_status{
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.product_order_status .list_item_table_list_div{
+	min-width: 80px;
+}
+/*End-订单状态单元格*/
+
+/*订单操作单元格*/
+.product_order_operation{
+}
+.product_order_operation .list_item_table_list_div{
+	min-width: 140px;
+}
+.product_order_operation div{
+}
+.product_order_operation button{
+	display: inline-block;
+}
+.order_pay_button{
+	width: 140px;
+	padding-right: 0;
+	padding-left: 0;
+}
+.order_remove_button{
+	width: 140px;
+	padding-right: 0;
+	padding-left: 0;
+
+}
+/*End-订单操作单元格*/
+/*-------------------结束-------------------*/
+.order_type_menu{
+
+	border-radius: 7px !important;
+}
+.order_type_menu button{
+	width: 150px;
+	margin: 0;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	background-color: unset !important;
+}
+.order_type_menu button:hover{
+	color: #666;
+}
+.order_type_menu button:active{
+	color: #666;
+}
+
+      /*=======================结束=======================*/
+
+      /*============登录对话框设置================*/
+
+      #overDiv {  
+	background-color:#000;  
+	width: 100%;  
+	height: 100%;  
+	left: 0;  
+	top: 0; /*FF IE7*/  
+	filter: alpha(opacity = 65); /*IE*/  
+	opacity: 0.65; /*FF*/  
+	z-index: 2147483646;  
+	position: fixed !important; /*FF IE7*/  
+	position: absolute; /*IE6*/  
+	_top: expression(eval(document.compatMode &&   
+	document.compatMode == 'CSS1Compat')?   
+	documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/   
+	document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight)/2 ); /*IE5 IE5.5*/  
+}
+#hsDiv {  
+	background:#fff; 
+	display: none;
+	border-radius: 7px;
+	z-index: 2147483647;  
+	width: 400px;  
+	height: 300px;  
+	left: 43%; /*FF IE7*/  
+	top: 37%; /*FF IE7*/  
+	margin-left: -150px !important; /*FF IE7 该值为本身宽的一半 */  
+	margin-top: -60px !important; /*FF IE7 该值为本身高的一半*/  
+	margin-top: 0px;  
+	position: fixed !important; /*FF IE7*/  
+	position: absolute; /*IE6*/  
+	_top: expression(eval(document.compatMode &&   
+	document.compatMode == 'CSS1Compat')?   
+	documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/   
+	document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight)/2 ); /*IE5 IE5.5*/  
+}
+#closediv{  
+	margin-left: 370px;
+	margin-top: -30px;
+	font-size: 25px;
+}
+
+/*======================结束=======================*/

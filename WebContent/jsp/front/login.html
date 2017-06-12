@@ -1,0 +1,365 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page needs
+	============================================ -->
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+   
+	<!-- Mobile specific metas
+	============================================ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<!-- Favicon
+	============================================ -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
+	
+	<!-- Google web fonts
+	============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="css/themecss/lib.css" rel="stylesheet">
+	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	
+	<!-- Theme CSS
+	============================================ -->
+   	<link href="css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="css/themecss/so-categories.css" rel="stylesheet">
+	<link href="css/themecss/so-listing-tabs.css" rel="stylesheet">
+	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	
+</head>
+<body class="res layout-subpage">
+    <div id="wrapper" class="wrapper-full ">
+		<!-- Header Container 头部容器  -->
+		<header id="header" class=" variantleft type_1">
+			<!-- Header Bottom 头部底部-->
+			<div class="header-bottom">
+				<div class="container">
+					<div class="row">
+						<!-- Main menu 主菜单-->
+						<div class="megamenu-hori header-bottom-right  col-md-9 col-sm-6 col-xs-12 ">
+							<div class="responsive so-megamenu ">
+								<nav class="navbar-default">
+									<div class=" container-megamenu  horizontal">
+										<div class="navbar-header">
+											<button type="button" id="show-megamenu" data-toggle="collapse" class="navbar-toggle">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+											Navigation		
+										</div>
+										
+										<div class="megamenu-wrapper">
+											<span id="remove-megamenu" class="fa fa-times"></span>
+											<div class="megamenu-pattern">
+												<div class="container">
+													<ul class="megamenu " data-transition="slide" data-animationtime="250">
+														<li class="hidden-md">
+															<p class="close-menu"></p>
+															<a href="#" class="clearfix">
+																<strong>主页</strong>
+															</a>
+														</li>
+														<li class="hidden-md">
+															<p class="close-menu"></p>
+															<a href="#" class="clearfix">
+																<strong>关于我们</strong>
+															</a>
+														</li>
+													</ul>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<!-- //End Main menu 结束主菜单-->
+						
+					</div>
+				</div>
+			</div>
+			<!-- //End Header Bottom 结束头部底部 -->
+		</header>
+		<!-- //End Header Container结束头部容器   -->
+
+		<!-- Main Container  -->
+		<div class="main-container container">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a></li>
+				<li><a href="#">账户</a></li>
+				<li><a href="#">登录</a></li>
+			</ul>
+			
+			<div class="row">
+				<div id="content" class="col-sm-12">
+					<div class="page-login">
+						<div class="account-border">
+							<div class="row">
+								<div class="col-sm-6 new-customer">
+									<div class="well">
+										<h2><i class="fa fa-file-o" aria-hidden="true"></i> 新客户</h2>
+										<p>通过创建一个帐户，您将能够更快地购物，按照订单的状态进行更新，并跟踪您之前订购的订单。</p>
+									</div>
+									<div class="bottom-form">
+										<a href="#" class="btn btn-default pull-right" onclick="show()">Continue</a>
+									</div>
+								</div>
+								
+								<form action="#" method="post" enctype="multipart/form-data">
+									<div class="col-sm-6 customer-login">
+										<div class="well">
+											<h2><i class="fa fa-file-text-o" aria-hidden="true"></i>老顾客</h2>
+											<p><strong>我是老顾客</strong></p>
+											<div class="form-group">
+												<label class="control-label " for="input-account">账户</label>
+												<input type="text" name="account" value="" id="input-account" class="form-control" />
+											</div>
+											<div class="form-group">
+												<label class="control-label " for="input-password">密码</label>
+												<input type="password" name="password" value="" id="input-password" class="form-control" />
+											</div>
+										</div>
+										<div class="bottom-form">
+											<a href="#" class="forgot">忘记密码</a>
+											<input type="submit" value="Login" class="btn btn-default pull-right" />
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Main Container -->
+
+		<!-- 登录对话框 -->
+		<style type="text/css">
+			#overDiv {  
+				background-color:#000;  
+				width: 100%;  
+				height: 100%;  
+				left: 0;  
+				top: 0; /*FF IE7*/  
+				filter: alpha(opacity = 65); /*IE*/  
+				opacity: 0.65; /*FF*/  
+				z-index: 2147483646;  
+				position: fixed !important; /*FF IE7*/  
+				position: absolute; /*IE6*/  
+				_top: expression(eval(document.compatMode &&   
+				document.compatMode == 'CSS1Compat')?   
+				documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/   
+				document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight)/2 ); /*IE5 IE5.5*/  
+			}
+			#hsDiv {  
+				background:#fff; 
+				display: none;
+				border-radius: 7px;
+				z-index: 2147483647;  
+				width: 400px;  
+				height: 300px;  
+				left: 43%; /*FF IE7*/  
+				top: 37%; /*FF IE7*/  
+				margin-left: -150px !important; /*FF IE7 该值为本身宽的一半 */  
+				margin-top: -60px !important; /*FF IE7 该值为本身高的一半*/  
+				margin-top: 0px;  
+				position: fixed !important; /*FF IE7*/  
+				position: absolute; /*IE6*/  
+				_top: expression(eval(document.compatMode &&   
+				document.compatMode == 'CSS1Compat')?   
+				documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/   
+				document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight)/2 ); /*IE5 IE5.5*/  
+			}
+			#closediv{  
+				margin-left: 370px;
+				margin-top: -30px;
+				font-size: 25px;
+			} 
+		</style>
+		<!-- 登录对话框javascript -->
+		<script type="text/javascript">
+			function show(){
+				document.getElementById("overDiv").style.display = "block";
+				document.getElementById("hsDiv").style.display = "block";
+			}
+			function closeDiv(){
+				document.getElementById("overDiv").style.display = "none";
+				document.getElementById("hsDiv").style.display = "none";
+			}
+		</script>
+		<div class="page-login" id="hsDiv">
+			<div class="account-border">
+				<form action="#" method="post" enctype="multipart/form-data">
+					<div class="customer-login">
+						<div class="well" style="border-radius: 7px;">
+							<!-- 右上角关闭按钮 -->  
+							<div id="closediv">  
+								<a href="javascript:void(0);" onclick="closeDiv()">
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</a>
+							</div>
+							<p><strong>您未登录，请登录！</strong></p>
+							<div class="form-group">
+								<label class="control-label " for="input-account">账户</label>
+								<input type="text" name="account" value="" id="input-account" class="form-control" />
+							</div>
+							<div class="form-group">
+								<label class="control-label " for="input-password">密码</label>
+								<input type="password" name="password" value="" id="input-password" class="form-control" />
+							</div>
+							<div>
+								<a href="#" class="forgot">忘记密码</a>
+							</div>
+							<div class="bottom-form" style="text-align: center;">
+								<input type="submit" value="Register" class="btn btn-default pull-left" style="width: 48%;" />
+								<input type="submit" value="Login" class="btn btn-default pull-right" style="width: 48%;" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="overDiv" style="display:none;"></div>  
+		<!-- 结束登录对话框 -->
+
+		<!-- Footer Container页脚容器 -->
+		<footer class="footer-container">
+			<!-- Footer Top Container -->
+			<section class="footer-top">
+				<div class="container content">
+					<div class="row">
+						<div class="col-sm-6 col-md-3 box-information">
+							<div class="module clearfix">
+								<h3 class="modtitle">信息</h3>
+								<div class="modcontent">
+									<ul class="menu">
+										<li><a href="#">关于我们</a></li>
+										<li><a href="#">常问问题</a></li>
+										<li><a href="#">订单历史</a></li>
+										<li><a href="#">订单信息</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3 box-service">
+							<div class="module clearfix">
+								<h3 class="modtitle">客户服务</h3>
+								<div class="modcontent">
+									<ul class="menu">
+										<li><a href="#">联系我们</a></li>
+										<li><a href="#">反馈</a></li>
+										<li><a href="#">网站导航</a></li>
+										<li><a href="#">我的账户</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3 box-account">
+							<div class="module clearfix">
+								<h3 class="modtitle">网站介绍</h3>
+								<div class="modcontent">
+									<ul class="menu">
+										<li><a href="#">品牌</a></li>
+										<li><a href="#">礼券</a></li>
+										<li><a href="#">关联公司</a></li>
+										<li><a href="#">特价</a></li>
+										<li><a href="#" target="_blank">我们的博客</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3 collapsed-block ">
+							<div class="module clearfix">
+								<h3 class="modtitle">联系我们</h3>
+								<div class="modcontent">
+									<ul class="contact-address">
+										<li><span class="fa fa-map-marker"></span> 团队, 北京理工大学珠海学院14软3淘丁丁小组</li>
+										<li><span class="fa fa-envelope-o"></span> Email: <a href="#"> 2234583424@qq.com</a></li>
+										<li><span class="fa fa-phone">&nbsp;</span> Phone 1: 13160675826 <br>Phone 2: 13160675826</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /Footer Top Container -->
+			
+			<!-- Footer Bottom Container -->
+			<div class="footer-bottom-block ">
+				<div class=" container">
+					<div class="row">
+						<div class="col-sm-12 copyright-text" style="text-align: center;">版权 &copy; 2017.淘丁丁小组 版权所有者.</div>
+						<!--Back To Top-->
+						<div class="back-to-top">
+							<i class="fa fa-angle-up"></i><span> Top </span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- /Footer Bottom Container -->
+		</footer>
+		<!-- //End Footer Container 结束页脚容器-->
+    </div>
+	
+	<!-- Preloading Screen预加载屏幕 -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<!-- End Preloading Screen结束预加载屏幕 -->
+
+	<!-- Include Libs & Plugins包括库和插件
+	============================================ -->
+	<!-- Placed at the end of the document so the pages load faster
+		放置在文档的末尾，以便页面加载更快
+	 -->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/themejs/libs.js"></script>
+	<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+	
+	
+	<!-- Theme files主题文件
+	============================================ -->
+	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="js/themejs/addtocart.js"></script>
+	<script type="text/javascript" src="js/themejs/application.js"></script>
+	
+	
+	
+</body>
+</html>
+

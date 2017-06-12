@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.tdd.domain.OrderItems" table="orderItems">
+		<id name="ori_id" column="ori_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="goods_num" column="goods_num"/>
+		<property name="rec_state" column="rec_state"/>
+		<property name="ori_passway" column="ori_passway"/>
+		<property name="goods_id" column="goods_id"/>
+		
+		<!-- 配置一方 -->
+		<many-to-one name="orders" class="com.tdd.domain.Orders" column="ord_id" cascade="save-update"/>
+			
+	</class>
+
+</hibernate-mapping>   

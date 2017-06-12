@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.tdd.domain.Goods" table="goods">
+		<id name="goods_id" column="goods_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="goods_name" column="goods_name"/>
+		<property name="cat_id" column="cat_id"/>
+		<property name="goods_price" column="goods_price"/>
+		<property name="goods_detail" column="goods_detail"/>
+		<property name="goods_inventory" column="goods_inventory"/>
+		<property name="goods_state" column="goods_state"/>
+		
+		<!-- 上传图片路径 -->
+		<property name="goods_pic" column="goods_pic"/>
+	</class>
+	
+</hibernate-mapping>    

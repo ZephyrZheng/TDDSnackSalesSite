@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- 先配置C3P0的连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<!-- <property name="jdbcUrl" value="jdbc:mysql://119.29.178.156:3306/tdd?useUnicode=true&amp;characterEncoding=UTF-8"/> -->
+		<property name="jdbcUrl" value="jdbc:mysql://139.199.176.106:3306/tdd?useUnicode=true&amp;characterEncoding=UTF-8"/>
+		<property name="user" value="root"/>
+		<property name="password" value="root2017"/>
+	</bean>
+	
+	<!-- LocalSessionFactoryBean加载配置文件 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 先加载连接池 -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 加载方言，加载可选 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+			</props>
+		</property>
+		
+		<!-- 引入映射的配置文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/tdd/domain/User.hbm.xml</value>
+				<value>com/tdd/domain/Goods.hbm.xml</value>
+				<value>com/tdd/domain/Order.hbm.xml</value>
+				<value>com/tdd/domain/OrderItems.hbm.xml</value>
+				<value>com/tdd/domain/ShopCar.hbm.xml</value>
+				<value>com/tdd/domain/Category.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 先配置平台事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 开启事务的注解 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<!-- 强调：以后配置Action，必须是多例的 -->
+	<!-- 配置用户模块 -->
+	<bean id="userAction" class="com.tdd.web.action.UserAction" scope="prototype">
+	 	<property name="userService" ref="userService"/>
+	 	<property name="goodsService" ref="goodsService"/>
+	 	<property name="ordersService" ref="ordersService"/>
+	 	<property name="ShopCarService" ref="ShopCarService"/>
+	</bean>
+	
+	<bean id="userService" class="com.tdd.service.UserServiceImpl">
+		<property name="userDao" ref="userDao"/>
+	</bean> 
+
+	<bean id="userDao" class="com.tdd.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>	
+	</bean>
+	
+	<!-- 商品模块 -->
+	<bean id="goodsAction" class="com.tdd.web.action.GoodsAction" scope="prototype">
+		<property name="goodsService" ref="goodsService"/>
+		<property name="ShopCarService" ref="ShopCarService"/>
+	</bean>
+	
+	<bean id="goodsService" class="com.tdd.service.GoodsServiceImpl">
+		<property name="goodsDao" ref="goodsDao"/>
+	</bean>
+	
+	<bean id="goodsDao" class="com.tdd.dao.GoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 订单模块 -->
+	<bean id="ordersAction" class="com.tdd.web.action.OrdersAction" scope="prototype">
+		<property name="ordersService" ref="ordersService"/>
+		<property name="userService" ref="userService"/>
+	</bean>
+	
+	<bean id="ordersService" class="com.tdd.service.OrdersServiceImpl">
+		<property name="ordersDao" ref="ordersDao"></property>
+	</bean>
+	
+	<bean id="ordersDao" class="com.tdd.dao.OrdersDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 订单项模块 -->
+	<bean id="orderItemsAction" class="com.tdd.web.action.OrderItemsAction" scope="prototype">
+		<property name="orderItemsService" ref="orderItemsService"/>
+		<property name="ordersService" ref="ordersService"/>
+		<property name="ShopCarService" ref="ShopCarService"/>
+	</bean>
+	
+	<bean id="orderItemsService" class="com.tdd.service.OrderItemsServiceImpl">
+		<property name="orderItemsDao" ref="orderItemsDao"></property>
+	</bean>
+	
+	<bean id="orderItemsDao" class="com.tdd.dao.OrderItemsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 购物车模块 -->
+	<bean id="ShopCarAction" class="com.tdd.web.action.ShopCarAction" scope="prototype">
+		<property name="ShopCarService" ref="ShopCarService"/>
+		<property name="userService" ref="userService"/>
+	</bean>
+	
+	<bean id="ShopCarService" class="com.tdd.service.ShopCarServiceImpl">
+		<property name="ShopCarDao" ref="ShopCarDao"></property>
+	</bean>
+	
+	<bean id="ShopCarDao" class="com.tdd.dao.ShopCardDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 分类模块 -->
+	<bean id="CategoryAction" class="com.tdd.web.action.CategoryAction" scope="prototype">
+		<property name="CategoryService" ref="CategoryService"/>
+	</bean>
+	
+	<bean id="CategoryService" class="com.tdd.service.CategoryServiceImpl">
+		<property name="CategoryDao" ref="CategoryDao"></property>
+	</bean>
+	
+	<bean id="CategoryDao" class="com.tdd.dao.CategoryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+</beans>
+
+
+

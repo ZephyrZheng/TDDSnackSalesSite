@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.tdd.domain.ShopCar" table="shopCar">
+		<id name="car_id" column="car_id">
+			<generator class="native"/>
+		</id>
+		
+		<!-- <property name="user_id" column="user_id"/> -->
+		<property name="goods_id" column="goods_id"/>
+		<property name="goods_num" column="goods_num"/>
+		<property name="car_createtime" column="car_createtime"/>
+		<property name="car_state" column="car_state"/>
+		<property name="car_note" column="car_note"/>
+		
+		<!-- 一方用户 -->
+		<many-to-one name="user" class="com.tdd.domain.User" column="user_id" cascade="save-update"/>
+		
+	</class>
+	
+</hibernate-mapping>    

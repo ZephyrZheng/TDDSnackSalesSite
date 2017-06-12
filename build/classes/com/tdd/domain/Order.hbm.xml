@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.tdd.domain.Orders" table="orders">
+		<id name="ord_id" column="ord_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="ord_number" column="ord_number"/>
+		<property name="ord_createtime" column="ord_createtime"/>
+		<property name="ord_state" column="ord_state"/>
+		<property name="ord_note" column="ord_note"/>
+		
+		<!-- 配置一方 -->
+		<many-to-one name="user" class="com.tdd.domain.User" column="user_id" cascade="save-update"/>
+			
+	</class>
+	
+</hibernate-mapping>    

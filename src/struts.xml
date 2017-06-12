@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<!-- 设置上传文件的总大小20M，默认是2M  struts.multipart.maxSize=2097152 -->
+	<constant name="struts.multipart.maxSize" value="20971520"/>
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<!-- 先配置包结构 -->
+	<package name="tdd" extends="struts-default" namespace="/">
+		
+		<!-- 配置全局的结果页面 -->
+		<global-results>
+			<result name="login" type="redirect">/login.jsp</result>
+		</global-results>
+		
+		<!-- 配置用户模块 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="update" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="add" type="redirect">jsp/back/DataManage.jsp</result>
+		</action>
+		
+		<action name="goods_*" class="goodsAction" method="{1}">
+			<result name="update" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="add" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="delete" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="search" type="redirect">jsp/front/product.jsp</result>
+		</action>	
+		
+		<action name="orders_*" class="ordersAction" method="{1}">
+        	<result name="update" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="delete" type="redirect">jsp/back/DataManage.jsp</result>
+        </action>
+        
+        <action name="orderItems_*" class="orderItemsAction" method="{1}">
+			<result name="update" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="add" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="delete" type="redirect">jsp/back/DataManage.jsp</result>
+		</action>
+		
+		<action name="ShopCar_*" class="ShopCarAction" method="{1}">
+			<result name="update" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="add" type="redirect">jsp/back/DataManage.jsp</result>
+			<result name="delete" type="redirect">jsp/back/DataManage.jsp</result>
+		</action>
+		
+		<action name ="FileUpload" class ="com.tdd.web.action.GoodsAction" method="picsUpload">
+			<result name="picsUpload">goods_manage.jsp</result>
+        </action >
+        <action name ="Submit" class ="com.tdd.web.action.FileAction" method="submit">
+           	<param name="savePath">/resources/files</param>
+            <result name ="success">result.jsp</result>
+        </action >
+        
+        <action name="Category_*" class="CategoryAction" method="{1}">
+			
+		</action>
+        
+        
+	</package>
+    
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
